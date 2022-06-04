@@ -1,0 +1,42 @@
+version: '3.9'
+services:
+  app:
+    build:
+      dockerfile: ./docker/dev/Dockerfile
+      context: .
+    container_name: tax_management
+    ports:
+      - '80:80'
+    depends_on:
+      - database
+    volumes:
+      - .:/var/www/tax_management
+  database:
+    image: 'mariadb:10.8'
+    container_name: tax_management_database
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: tax_management
+    ports:
+      - '3306'
+    volumes:
+      - tax_management_database_init:/docker-entrypoint-initdb.d/init.sql
+      - tax_management_database_data:/var/lib/mysql
+  phpmyadmin:
+    depends_on:
+      - database
+    image: phpmyadmin/phpmyadmin
+    container_name: tax_management_phpmyadmin
+    ports:
+      - '8080:80'
+    environment:
+      - PMA_HOST=database
+      - MYSQL_ROOT_PASSWORD=password
+volumes:
+  tax_management_database_init:
+    name: tax_management_database_init
+    driver: local
+  tax_management_database_data:
+    name: tax_management_database_data
+    driver: local
