@@ -1,0 +1,36 @@
+<doctrine-mapping>
+    <entity name="App\Invoice\Data\Model\InvoiceData">
+        <indexes>
+            <index columns="number"/>
+        </indexes>
+
+        <id name="id" type="integer">
+            <generator strategy="AUTO"/>
+        </id>
+
+        <field name="number" type="invoice_number" unique="true"/>
+        <field name="paymentDeadline" type="datetime_immutable"/>
+        <field name="paymentMethod" type="string"/>
+        <embedded name="release" class="App\Invoice\Data\ObjectValue\Release"/>
+        <field name="executeDate" type="datetime_immutable"/>
+
+        <many-to-one field="seller" target-entity="App\Company\Model\Company">
+            <join-column nullable="true"/>
+        </many-to-one>
+
+        <many-to-one field="buyer" target-entity="App\Company\Model\Company">
+            <join-column nullable="true"/>
+        </many-to-one>
+
+        <one-to-many field="invoiceItems" target-entity="App\Invoice\Item\Model\InvoiceItem" mapped-by="invoiceData">
+            <cascade>
+                <cascade-persist/>
+                <cascade-remove/>
+            </cascade>
+        </one-to-many>
+
+        <field name="comments" type="string" nullable="true" length="150"/>
+        <field name="updatedAt" type="datetime_immutable" nullable="true"/>
+        <field name="createdAt" type="datetime_immutable"/>
+    </entity>
+</doctrine-mapping>

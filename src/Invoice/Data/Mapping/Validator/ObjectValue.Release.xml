@@ -1,0 +1,10 @@
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping">
+<class name="App\Invoice\Data\ObjectValue\Release">
+        <property name="place">
+            <constraint name="Length">
+                <option name="min">1</option>
+                <option name="max">50</option>
+            </constraint>
+        </property>
+    </class>
+</constraint-mapping>

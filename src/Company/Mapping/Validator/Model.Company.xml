@@ -1,0 +1,32 @@
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping">
+    <class name="App\Company\Model\Company">
+        <property name="name">
+            <constraint name="Length">
+                <option name="min">1</option>
+                <option name="max">50</option>
+            </constraint>
+        </property>
+        <property name="address">
+            <constraint name="Valid"/>
+        </property>
+        <property name="bankAccount">
+            <constraint name="Valid"/>
+        </property>
+        <property name="nip">
+            <constraint name="NotBlank"/>
+            <constraint name="Regex">
+                <option name="pattern">/^[0-9]{10}$/</option>
+            </constraint>
+        </property>
+        <property name="regon">
+            <constraint name="Regex">
+                <option name="pattern">/^[0-9]{9}$/</option>
+            </constraint>
+        </property>
+        <property name="comments">
+            <constraint name="Length">
+                <option name="max">150</option>
+            </constraint>
+        </property>
+    </class>
+</constraint-mapping>

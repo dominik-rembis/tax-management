@@ -1,3 +1,6 @@
+imports:
+    - resource: mapping.yaml
+
 services:
     _defaults:
         autowire: true
@@ -7,9 +10,11 @@ services:
         resource: '../src/'
         exclude:
             - '../src/DependencyInjection/'
-            - '../src/Entity/'
             - '../src/Kernel.php'
 
     App\Core\EventSubscriber\Orm\TimestampSubscriber:
+        tags:
+            - name: doctrine.event_subscriber
+    App\Invoice\Data\EventSubscriber\Orm\InvoiceNumberSubscriber:
         tags:
             - name: doctrine.event_subscriber

@@ -1,0 +1,12 @@
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping">
+    <class name="App\Company\ObjectValue\BankAccountNumber">
+        <attribute name="iban">
+            <group>company:read</group>
+            <group>company:write</group>
+        </attribute>
+        <attribute name="number">
+            <group>company:read</group>
+            <group>company:write</group>
+        </attribute>
+    </class>
+</serializer>

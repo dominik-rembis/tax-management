@@ -1,0 +1,28 @@
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping">
+    <class name="App\Company\ObjectValue\Address">
+        <property name="street">
+            <constraint name="Length">
+                <option name="min">1</option>
+                <option name="max">30</option>
+            </constraint>
+        </property>
+        <property name="zipCode">
+            <constraint name="NotBlank"/>
+            <constraint name="Regex">
+                <option name="pattern">/^\d{2}-\d{3}$/</option>
+            </constraint>
+        </property>
+        <property name="city">
+            <constraint name="Length">
+                <option name="min">1</option>
+                <option name="max">30</option>
+            </constraint>
+        </property>
+        <property name="country">
+            <constraint name="Length">
+                <option name="min">1</option>
+                <option name="max">30</option>
+            </constraint>
+        </property>
+    </class>
+</constraint-mapping>

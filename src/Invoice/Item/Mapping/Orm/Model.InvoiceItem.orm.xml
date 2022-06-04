@@ -1,0 +1,16 @@
+<doctrine-mapping>
+    <entity name="App\Invoice\Item\Model\InvoiceItem">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+
+        <many-to-one field="invoiceData" target-entity="App\Invoice\Data\Model\InvoiceData" inversed-by="invoiceItems">
+            <join-column nullable="true"/>
+        </many-to-one>
+
+        <field name="name" type="string" length="50"/>
+        <field name="netAmount" type="float"/>
+        <field name="updatedAt" type="datetime_immutable" nullable="true"/>
+        <field name="createdAt" type="datetime_immutable"/>
+    </entity>
+</doctrine-mapping>

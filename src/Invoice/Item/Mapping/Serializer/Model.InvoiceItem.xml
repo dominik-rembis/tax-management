@@ -1,0 +1,15 @@
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping">
+    <class name="App\Invoice\Item\Model\InvoiceItem">
+        <attribute name="id">
+            <group>invoice:read</group>
+        </attribute>
+        <attribute name="name">
+            <group>invoice:read</group>
+            <group>invoice:write</group>
+        </attribute>
+        <attribute name="netAmount">
+            <group>invoice:read</group>
+            <group>invoice:write</group>
+        </attribute>
+    </class>
+</serializer>

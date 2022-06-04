@@ -1,0 +1,31 @@
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping">
+    <class name="App\Company\Model\Company">
+        <attribute name="id">
+            <group>company:read</group>
+        </attribute>
+        <attribute name="name">
+            <group>company:read</group>
+            <group>company:write</group>
+        </attribute>
+        <attribute name="address">
+            <group>company:read</group>
+            <group>company:write</group>
+        </attribute>
+        <attribute name="bankAccount">
+            <group>company:read</group>
+            <group>company:write</group>
+        </attribute>
+        <attribute name="nip">
+            <group>company:read</group>
+            <group>company:write</group>
+        </attribute>
+        <attribute name="regon">
+            <group>company:read</group>
+            <group>company:write</group>
+        </attribute>
+        <attribute name="comments">
+            <group>company:read</group>
+            <group>company:write</group>
+        </attribute>
+    </class>
+</serializer>

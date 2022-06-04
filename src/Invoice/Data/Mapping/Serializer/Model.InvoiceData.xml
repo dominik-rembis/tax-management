@@ -1,0 +1,42 @@
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping">
+    <class name="App\Invoice\Data\Model\InvoiceData">
+        <attribute name="id">
+            <group>invoice:read</group>
+        </attribute>
+        <attribute name="invoiceNumber">
+            <group>invoice:read</group>
+        </attribute>
+        <attribute name="paymentDeadline">
+            <group>invoice:read</group>
+            <group>invoice:write</group>
+        </attribute>
+        <attribute name="paymentMethod">
+            <group>invoice:read</group>
+            <group>invoice:write</group>
+        </attribute>
+        <attribute name="release">
+            <group>invoice:read</group>
+            <group>invoice:write</group>
+        </attribute>
+        <attribute name="executeDate">
+            <group>invoice:read</group>
+            <group>invoice:write</group>
+        </attribute>
+        <attribute name="seller">
+            <group>invoice:read</group>
+            <group>invoice:write</group>
+        </attribute>
+        <attribute name="buyer">
+            <group>invoice:read</group>
+            <group>invoice:write</group>
+        </attribute>
+        <attribute name="invoiceItems">
+            <group>invoice:read</group>
+            <group>invoice:write</group>
+        </attribute>
+        <attribute name="comments">
+            <group>invoice:read</group>
+            <group>invoice:write</group>
+        </attribute>
+    </class>
+</serializer>

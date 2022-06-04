@@ -1,0 +1,16 @@
+<doctrine-mapping>
+    <entity name="App\Company\Model\Company">
+        <id name="id" type="integer">
+            <generator strategy="AUTO"/>
+        </id>
+
+        <field name="name" type="string" length="50"/>
+        <embedded name="address" class="App\Company\ObjectValue\Address" use-column-prefix="false"/>
+        <embedded name="bankAccount" class="App\Company\ObjectValue\BankAccountNumber" use-column-prefix="false"/>
+        <field name="nip" type="string"/>
+        <field name="regon" type="string" nullable="true"/>
+        <field name="comments" type="string" nullable="true" length="150"/>
+        <field name="updatedAt" type="datetime_immutable" nullable="true"/>
+        <field name="createdAt" type="datetime_immutable"/>
+    </entity>
+</doctrine-mapping>

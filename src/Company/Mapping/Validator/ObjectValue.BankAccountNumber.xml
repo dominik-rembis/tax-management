@@ -1,0 +1,15 @@
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping">
+    <class name="App\Company\ObjectValue\BankAccountNumber">
+        <property name="iban">
+            <constraint name="Regex">
+                <option name="pattern">/^[A-Z]{2}$/</option>
+            </constraint>
+        </property>
+        <property name="number">
+            <constraint name="Length">
+                <option name="min">26</option>
+                <option name="max">30</option>
+            </constraint>
+        </property>
+    </class>
+</constraint-mapping>

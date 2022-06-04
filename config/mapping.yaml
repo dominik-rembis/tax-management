@@ -1,0 +1,20 @@
+parameters:
+  api_platform.mapping.paths: [
+    '%kernel.project_dir%/src/Invoice/Data/Mapping/Api',
+    '%kernel.project_dir%/src/Company/Mapping/Api',
+    '%kernel.project_dir%/src/User/Data/Mapping/Api'
+  ]
+
+  serializer.mapping.paths: [
+    '%kernel.project_dir%/src/Invoice/Data/Mapping/Serializer',
+    '%kernel.project_dir%/src/Invoice/Item/Mapping/Serializer',
+    '%kernel.project_dir%/src/Company/Mapping/Serializer',
+    '%kernel.project_dir%/src/User/Data/Mapping/Serializer'
+  ]
+
+  validator.mapping.paths: [
+    '%kernel.project_dir%/src/Invoice/Data/Mapping/Validator',
+    '%kernel.project_dir%/src/Invoice/Item/Mapping/Validator',
+    '%kernel.project_dir%/src/Company/Mapping/Validator',
+    '%kernel.project_dir%/src/User/Data/Mapping/Validator'
+  ]

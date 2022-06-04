@@ -1,0 +1,20 @@
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping">
+    <class name="App\Company\ObjectValue\Address">
+        <attribute name="street">
+            <group>company:read</group>
+            <group>company:write</group>
+        </attribute>
+        <attribute name="zipCode">
+            <group>company:read</group>
+            <group>company:write</group>
+        </attribute>
+        <attribute name="city">
+            <group>company:read</group>
+            <group>company:write</group>
+        </attribute>
+        <attribute name="country">
+            <group>company:read</group>
+            <group>company:write</group>
+        </attribute>
+    </class>
+</serializer>

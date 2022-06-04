@@ -1,0 +1,6 @@
+<doctrine-mapping>
+    <embeddable name="App\Invoice\Data\ObjectValue\Release">
+        <field name="place" type="string" length="50"/>
+        <field name="date" type="datetime_immutable"/>
+    </embeddable>
+</doctrine-mapping>

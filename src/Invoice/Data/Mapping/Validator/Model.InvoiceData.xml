@@ -1,0 +1,24 @@
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping">
+    <class name="App\Invoice\Data\Model\InvoiceData">
+        <property name="paymentMethod">
+            <constraint name="Choice">
+                <option name="callback">
+                    <value>App\Invoice\Data\Dictionary\PaymentMethod</value>
+                    <value>values</value>
+                </option>
+            </constraint>
+        </property>
+        <property name="release">
+            <constraint name="Valid"/>
+        </property>
+        <property name="invoiceItems">
+            <constraint name="Valid"/>
+        </property>
+        <property name="comments">
+            <constraint name="Length">
+                <option name="min">1</option>
+                <option name="max">150</option>
+            </constraint>
+        </property>
+    </class>
+</constraint-mapping>

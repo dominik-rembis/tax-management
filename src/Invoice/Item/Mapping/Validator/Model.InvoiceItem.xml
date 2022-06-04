@@ -1,0 +1,15 @@
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping">
+    <class name="App\Invoice\Item\Model\InvoiceItem">
+        <property name="name">
+            <constraint name="Length">
+                <option name="min">1</option>
+                <option name="max">50</option>
+            </constraint>
+        </property>
+        <property name="netAmount">
+            <constraint name="GreaterThanOrEqual">
+                <option name="value">1</option>
+            </constraint>
+        </property>
+    </class>
+</constraint-mapping>

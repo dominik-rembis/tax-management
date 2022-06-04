@@ -1,0 +1,36 @@
+<resources xmlns="https://api-platform.com/schema/metadata">
+    <resource class="App\Invoice\Data\Model\InvoiceData" shortName="Invoice">
+        <collectionOperations>
+            <collectionOperation name="get">
+                <attribute name="path">/invoices</attribute>
+            </collectionOperation>
+            <collectionOperation name="post">
+                <attribute name="path">/invoice</attribute>
+            </collectionOperation>
+        </collectionOperations>
+
+        <itemOperations>
+            <itemOperation name="get">
+                <attribute name="path">/invoice/{id}</attribute>
+            </itemOperation>
+            <itemOperation name="put">
+                <attribute name="path">/invoice/{id}</attribute>
+            </itemOperation>
+            <itemOperation name="delete">
+                <attribute name="path">/invoice/{id}</attribute>
+            </itemOperation>
+        </itemOperations>
+
+        <attribute name="normalization_context">
+            <attribute name="groups">
+                <attribute>invoice:read</attribute>
+            </attribute>
+        </attribute>
+
+        <attribute name="denormalization_context">
+            <attribute name="groups">
+                <attribute>invoice:write</attribute>
+            </attribute>
+        </attribute>
+    </resource>
+</resources>

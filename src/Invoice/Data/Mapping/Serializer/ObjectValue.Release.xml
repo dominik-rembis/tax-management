@@ -1,0 +1,12 @@
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping">
+    <class name="App\Invoice\Data\ObjectValue\Release">
+        <attribute name="place">
+            <group>invoice:read</group>
+            <group>invoice:write</group>
+        </attribute>
+        <attribute name="date">
+            <group>invoice:read</group>
+            <group>invoice:write</group>
+        </attribute>
+    </class>
+</serializer>

@@ -1,0 +1,37 @@
+<resources xmlns="https://api-platform.com/schema/metadata">
+    <resource class="App\Company\Model\Company">
+        <collectionOperations>
+            <collectionOperation name="get">
+                <attribute name="path">/companies</attribute>
+                <attribute name="security">is_granted("ROLE_USER")</attribute>
+            </collectionOperation>
+            <collectionOperation name="post">
+                <attribute name="path">/company</attribute>
+            </collectionOperation>
+        </collectionOperations>
+
+        <itemOperations>
+            <itemOperation name="get">
+                <attribute name="path">/company/{id}</attribute>
+            </itemOperation>
+            <itemOperation name="put">
+                <attribute name="path">/company/{id}</attribute>
+            </itemOperation>
+            <itemOperation name="delete">
+                <attribute name="path">/company/{id}</attribute>
+            </itemOperation>
+        </itemOperations>
+
+        <attribute name="normalization_context">
+            <attribute name="groups">
+                <attribute>company:read</attribute>
+            </attribute>
+        </attribute>
+
+        <attribute name="denormalization_context">
+            <attribute name="groups">
+                <attribute>company:write</attribute>
+            </attribute>
+        </attribute>
+    </resource>
+</resources>
