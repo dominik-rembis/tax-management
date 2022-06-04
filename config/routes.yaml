@@ -1,3 +1,7 @@
+authentication_login:
+    path: /login
+    methods: ['POST']
+
 controllers:
     resource: ../src/Controller/
     type: attribute

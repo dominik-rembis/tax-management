@@ -1,0 +1,36 @@
+<resources xmlns="https://api-platform.com/schema/metadata">
+    <resource class="App\User\Data\Model\UserData" shortName="User">
+        <collectionOperations>
+            <collectionOperation name="get">
+                <attribute name="path">/users</attribute>
+            </collectionOperation>
+            <collectionOperation name="post">
+                <attribute name="path">/user</attribute>
+            </collectionOperation>
+        </collectionOperations>
+
+        <itemOperations>
+            <itemOperation name="get">
+                <attribute name="path">/user/{id}</attribute>
+            </itemOperation>
+            <itemOperation name="put">
+                <attribute name="path">/user/{id}</attribute>
+            </itemOperation>
+            <itemOperation name="delete">
+                <attribute name="path">/user/{id}</attribute>
+            </itemOperation>
+        </itemOperations>
+
+        <attribute name="normalization_context">
+            <attribute name="groups">
+                <attribute>user:read</attribute>
+            </attribute>
+        </attribute>
+
+        <attribute name="denormalization_context">
+            <attribute name="groups">
+                <attribute>user:write</attribute>
+            </attribute>
+        </attribute>
+    </resource>
+</resources>
