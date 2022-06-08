@@ -1,0 +1,26 @@
+<table class="w-full">
+    <thead class="text-left">
+        <tr>
+            <th class="border border-black px-3 py-1">{{ 'invoice.table.countable_number'|trans }}</th>
+            <th class="border border-black px-3 py-1">{{ 'invoice.table.product_service_name'|trans }}</th>
+            <th class="border border-black px-3 py-1">{{ 'invoice.table.price'|trans }}</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for invoiceItem in invoiceData.invoiceItems %}
+        <tr>
+            <td class="border border-black px-3 py-1">{{ loop.index }}</td>
+            <td class="border border-black px-3 py-1">{{ invoiceItem.name }}</td>
+            <td class="border border-black px-3 py-1">{{ invoiceItem.netAmount }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2" class="border border-black px-3 py-1 text-right">
+                <span class="font-bold">{{ 'invoice.table.sum'|trans }} (PLN)</span>
+            </td>
+            <td class="border border-black px-3 py-1">{{ invoiceData.netAmountSum }}</td>
+        </tr>
+    </tfoot>
+</table>

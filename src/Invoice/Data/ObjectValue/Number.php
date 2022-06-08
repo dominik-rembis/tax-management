@@ -31,4 +31,9 @@ class Number
     {
         return sprintf('%s/%s/%s', $this->id, $this->month, $this->year);
     }
+
+    public function __toString(): string
+    {
+        return $this->getNumber();
+    }
 }

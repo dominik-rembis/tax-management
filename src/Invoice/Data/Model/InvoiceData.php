@@ -142,6 +142,16 @@ class InvoiceData
         return $this;
     }
 
+    public function getNetAmountSum(): float
+    {
+        return array_sum(
+            array_map(
+                fn($item) => $item->getNetAmount(),
+                $this->invoiceItems->toArray()
+            )
+        );
+    }
+
     public function getComments(): string
     {
         return $this->comments;

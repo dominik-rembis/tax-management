@@ -1,6 +1,8 @@
 doctrine:
     dbal:
         url: '%env(resolve:DATABASE_URL)%'
+        types:
+            invoice_number: App\Invoice\Data\Util\Orm\Type\NumberType
 
     orm:
         auto_generate_proxy_classes: true
@@ -19,6 +21,24 @@ doctrine:
                 dir: '%kernel.project_dir%/src/User/Permission/Mapping/Orm'
                 prefix: 'App\User\Permission'
                 alias: App\User\Permission
+            App\Company:
+                type: xml
+                is_bundle: false
+                dir: '%kernel.project_dir%/src/Company/Mapping/Orm'
+                prefix: 'App\Company'
+                alias: App\Company
+            App\Invoice\Data:
+                type: xml
+                is_bundle: false
+                dir: '%kernel.project_dir%/src/Invoice/Data/Mapping/Orm'
+                prefix: 'App\Invoice\Data'
+                alias: App\Invoice\Data
+            App\Invoice\Item:
+                type: xml
+                is_bundle: false
+                dir: '%kernel.project_dir%/src/Invoice/Item/Mapping/Orm'
+                prefix: 'App\Invoice\Item'
+                alias: App\Invoice\Item
 
 when@test:
     doctrine:

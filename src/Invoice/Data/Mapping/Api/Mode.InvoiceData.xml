@@ -19,6 +19,11 @@
             <itemOperation name="delete">
                 <attribute name="path">/invoice/{id}</attribute>
             </itemOperation>
+            <itemOperation name="invoice_preview">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/invoice/preview/{id}</attribute>
+                <attribute name="controller">App\Invoice\Data\Controller\InvoicePreview</attribute>
+            </itemOperation>
         </itemOperations>
 
         <attribute name="normalization_context">

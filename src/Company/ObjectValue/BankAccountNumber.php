@@ -20,4 +20,9 @@ class BankAccountNumber
     {
         return $this->number;
     }
+
+    public function __toString(): string
+    {
+        return $this->iban . $this->number;
+    }
 }

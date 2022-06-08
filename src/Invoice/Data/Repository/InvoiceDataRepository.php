@@ -9,8 +9,15 @@ use Doctrine\ORM\EntityManagerInterface;
 class InvoiceDataRepository
 {
     public function __construct(
-        private EntityManagerInterface $entityManager
+        private readonly EntityManagerInterface $entityManager
     ) {}
+
+    public function findOneById(int $id): InvoiceData
+    {
+        return $this->entityManager
+            ->getRepository(InvoiceData::class)
+            ->find($id);
+    }
 
     public function findLastInvoiceNumber(): ?Number
     {

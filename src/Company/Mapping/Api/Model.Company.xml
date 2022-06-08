@@ -3,7 +3,7 @@
         <collectionOperations>
             <collectionOperation name="get">
                 <attribute name="path">/companies</attribute>
-                <attribute name="security">is_granted("ROLE_USER")</attribute>
+<!--                <attribute name="security">is_granted("ROLE_USER")</attribute>-->
             </collectionOperation>
             <collectionOperation name="post">
                 <attribute name="path">/company</attribute>

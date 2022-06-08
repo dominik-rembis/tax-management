@@ -1,0 +1,12 @@
+<fieldset class="w-1/2 border border-black p-2">
+    <legend>{{ title }}</legend>
+    <ol>
+        <li>{{ company.name }}</li>
+        <li>{{ company.address.street }}, {{ company.address.zipCode }} {{ company.address.city }}</li>
+        <li>{{ company.address.country }}</li>
+        <li>NIP: {{ company.nip }}</li>
+        {% if company.regon %}
+            <li>REGON: {{ company.regon }}</li>
+        {% endif %}
+    </ol>
+</fieldset>

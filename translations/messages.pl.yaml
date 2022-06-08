@@ -1,0 +1,25 @@
+invoice:
+  title: Faktura
+  release:
+    date: Data wystawienia
+    place: Miejsce wystawienia
+  execute:
+    date: Data wykonania usługi
+  company:
+    seller: Sprzedawca
+    buyer: Nabywca
+  payment:
+    deadline: Termin płatności
+    method:
+      title: Forma płatności
+      TRANSFER: przelew
+      CASH: gotówka
+    account:
+      number: Numer konta
+  table:
+    countable_number: Lp.
+    product_service_name: Nazwa towru / usługi
+    price: Cena
+    sum: Razem
+  signature:
+    authorized_person: podpis osoby upowaznionej do wystawienia faktur
