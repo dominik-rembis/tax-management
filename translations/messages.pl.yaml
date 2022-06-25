@@ -23,3 +23,7 @@ invoice:
     sum: Razem
   signature:
     authorized_person: podpis osoby upowaznionej do wystawienia faktur
+
+vat_identifier:
+  polska: poland
+  malta: malta

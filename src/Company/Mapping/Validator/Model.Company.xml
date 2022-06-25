@@ -13,10 +13,7 @@
             <constraint name="Valid"/>
         </property>
         <property name="nip">
-            <constraint name="NotBlank"/>
-            <constraint name="Regex">
-                <option name="pattern">/^([A-Z]{2})?([0-9]{8,10})$/</option>
-            </constraint>
+            <constraint name="App\Company\Util\Validator\VatIdentifier"/>
         </property>
         <property name="regon">
             <constraint name="Regex">

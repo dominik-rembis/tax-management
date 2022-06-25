@@ -7,10 +7,10 @@ namespace App\Company\ObjectValue;
 class Address
 {
     public function __construct(
-        private string $street,
-        private string $zipCode,
-        private string $city,
-        private string $country
+        private readonly string $street,
+        private readonly string $zipCode,
+        private readonly string $city,
+        private readonly string $country
     ) {}
 
     public function getStreet(): string

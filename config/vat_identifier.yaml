@@ -1,0 +1,5 @@
+parameters:
+  vat.validation.rules: [
+    poland: '^(PL)?(\d{10})$',
+    malta: '^(MT)?(\d{8})$'
+  ]

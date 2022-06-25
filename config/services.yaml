@@ -1,5 +1,6 @@
 imports:
     - resource: mapping.yaml
+    - resource: vat_identifier.yaml
 
 services:
     _defaults:
@@ -15,6 +16,11 @@ services:
     App\Core\EventSubscriber\Orm\TimestampSubscriber:
         tags:
             - name: doctrine.event_subscriber
+
     App\Invoice\Data\EventSubscriber\Orm\InvoiceNumberSubscriber:
         tags:
             - name: doctrine.event_subscriber
+
+    App\Company\Util\Validator\VatIdentifierValidator:
+        bind:
+            $vatValidationRules: '%vat.validation.rules%'
