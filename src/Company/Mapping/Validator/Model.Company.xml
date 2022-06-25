@@ -15,7 +15,7 @@
         <property name="nip">
             <constraint name="NotBlank"/>
             <constraint name="Regex">
-                <option name="pattern">/^[0-9]{10}$/</option>
+                <option name="pattern">/^([A-Z]{2})?([0-9]{8,10})$/</option>
             </constraint>
         </property>
         <property name="regon">
