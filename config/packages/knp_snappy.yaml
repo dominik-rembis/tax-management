@@ -5,5 +5,3 @@ knp_snappy:
         options:    []
     image:
         enabled:    false
-        binary:     '%env(WKHTMLTOIMAGE_PATH)%'
-        options:    []

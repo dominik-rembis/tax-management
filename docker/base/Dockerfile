@@ -4,7 +4,7 @@ WORKDIR /var/www/tax_management/
 
 RUN a2enmod rewrite
 
-RUN apt update && apt install -y unzip libicu-dev libxml2-dev
+RUN apt update && apt install -y unzip libicu-dev libxml2-dev wkhtmltopdf
 
 RUN docker-php-ext-install opcache intl pdo xml pdo_mysql
 RUN docker-php-ext-enable pdo_mysql
