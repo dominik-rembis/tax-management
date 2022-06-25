@@ -24,6 +24,11 @@
                 <attribute name="path">/invoice/preview/{id}</attribute>
                 <attribute name="controller">App\Invoice\Data\Controller\InvoicePreview</attribute>
             </itemOperation>
+            <itemOperation name="invoice_pdf">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/invoice/pdf/{id}</attribute>
+                <attribute name="controller">App\Invoice\Data\Controller\InvoiceToPDF</attribute>
+            </itemOperation>
         </itemOperations>
 
         <attribute name="normalization_context">

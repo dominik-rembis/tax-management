@@ -1,7 +1,6 @@
 <ol>
     <li>{{ 'invoice.payment.deadline'|trans }}: {{ invoiceData.paymentDeadline|date('d.m.Y') }}</li>
-    <li>
-        {{ 'invoice.payment.method.title'|trans }}: {{ ('invoice.payment.method.' ~ invoiceData.paymentMethod.value)|trans }}</li>
+    <li>{{ 'invoice.payment.method.title'|trans }}: {{ ('invoice.payment.method.' ~ invoiceData.paymentMethod.value)|trans }}</li>
     {% if invoiceData.paymentMethod is constant('App\\Invoice\\Data\\Dictionary\\PaymentMethod::TRANSFER') %}
         <li>{{ 'invoice.payment.account.number'|trans }}: {{ invoiceData.seller.bankAccount }}</li>
     {% endif %}

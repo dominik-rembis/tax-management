@@ -1,11 +1,15 @@
 {% extends 'invoice/base.html.twig' %}
 
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ absolute_url('/assets/invoice/default/data.css') }}">
+{% endblock %}
+
 {% block body %}
-    <main class="m-8 flex flex-col gap-y-7">
+    <main>
         <section>
             {{ include('invoice/default/component/info.html.twig') }}
         </section>
-        <section class="flex flex-row gap-x-4">
+        <section class="contractors-component">
             {{ include('invoice/default/component/company.html.twig', { company: invoiceData.seller, title: 'invoice.company.seller'|trans }) }}
             {{ include('invoice/default/component/company.html.twig', { company: invoiceData.buyer, title: 'invoice.company.buyer'|trans }) }}
         </section>
@@ -15,8 +19,8 @@
         <section>
             {{ include('invoice/default/component/table.html.twig') }}
         </section>
-        <section class="mt-16">
-            <div class="relative float-right w-1/3 border-t border-black text-center text-sm">
+        <section>
+            <div class="signature-component">
                 {{ 'invoice.signature.authorized_person'|trans }}
             </div>
         </section>

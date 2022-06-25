@@ -7,9 +7,9 @@ namespace App\Invoice\Data\ObjectValue;
 class Number
 {
     public function __construct(
-        private string $id,
-        private string $month,
-        private string $year
+        private readonly string $id,
+        private readonly string $month,
+        private readonly string $year
     ) {}
     
     public function getId(): int

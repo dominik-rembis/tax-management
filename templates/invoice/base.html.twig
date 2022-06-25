@@ -4,9 +4,10 @@
         <meta charset="UTF-8">
         <title>{% block title %}Invoice{% endblock %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="{{ absolute_url('/assets/invoice/base.tailwind.css') }}">
+        {% block stylesheet %}{% endblock %}
     </head>
-    <body class="bg-white">
+    <body>
         {% block body %}{% endblock %}
     </body>
 </html>
