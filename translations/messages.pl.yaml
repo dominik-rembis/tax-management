@@ -22,7 +22,7 @@ invoice:
     price: Cena
     sum: Razem
   signature:
-    authorized_person: podpis osoby upoważnionej do wystawienia faktur
+    authorized_person: podpis osoby upoważnionej do wystawienia faktury
 
 vat_identifier:
   polska: poland
