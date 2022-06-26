@@ -21,6 +21,10 @@ fieldset {
   padding: 0.5rem;
 }
 
+fieldset > legend {
+  background-color: #fff;
+}
+
 table {
   width: 100%;
 }
