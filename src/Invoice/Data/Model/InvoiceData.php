@@ -152,7 +152,7 @@ class InvoiceData
         );
     }
 
-    public function getComments(): string
+    public function getComments(): ?string
     {
         return $this->comments;
     }

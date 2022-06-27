@@ -23,6 +23,7 @@ invoice:
     sum: Razem
   signature:
     authorized_person: podpis osoby upoważnionej do wystawienia faktury
+  remarks: Uwagi
 
 vat_identifier:
   polska: poland

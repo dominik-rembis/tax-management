@@ -1,0 +1,7 @@
+{% if invoiceData.comments %}
+    <ol>
+        <li>
+            <b>{{ 'invoice.remarks'|trans }}:</b> {{ invoiceData.comments }}
+        </li>
+    </ol>
+{% endif %}
