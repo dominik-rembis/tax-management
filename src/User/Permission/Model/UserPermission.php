@@ -13,7 +13,7 @@ class UserPermission
     private ?int $id = null;
 
     public function __construct(
-        private string $name
+        protected string $name
     ) {}
 
     public function getId(): ?int

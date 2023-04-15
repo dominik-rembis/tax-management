@@ -17,7 +17,7 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
     name: 'user:initialize',
     description: 'First user initialization',
 )]
-class UserCreateCommand extends Command
+final class UserCreateCommand extends Command
 {
     private PasswordGenerator $passwordGenerator;
 

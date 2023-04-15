@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Core\Exception;
 
-class ValidatorNotSupportModel extends \Exception
+final class ValidatorNotSupportModel extends \Exception
 {
     private const MESSAGE = 'validator not support model: %s';
 

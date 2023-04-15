@@ -14,7 +14,7 @@ use Symfony\Component\Console\Output\OutputInterface;
     name: 'permission:seed',
     description: 'Supplementing the database with priorities',
 )]
-class PermissionSeedCommand extends Command
+final class PermissionSeedCommand extends Command
 {
     public function __construct(
         private readonly UserPermissionRepository $permissionRepository
