@@ -7,22 +7,16 @@ namespace App\Company\ObjectValue;
 class BankAccountNumber
 {
     public function __construct(
-        private string $iban,
-        private string $number
+        public readonly string $iban,
+        public readonly string $number
     ) {}
-
-    public function getIban(): string
-    {
-        return $this->iban;
-    }
-
-    public function getNumber(): string
-    {
-        return $this->number;
-    }
 
     public function __toString(): string
     {
-        return $this->iban . $this->number;
+        return sprintf(
+            '%s %s',
+            $this->iban,
+            preg_replace(pattern: '/(\d{2})(\d{2})/', replacement: '$1 $2', subject: $this->number)
+        );
     }
 }
