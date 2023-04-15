@@ -10,12 +10,12 @@ use App\Invoice\Data\Repository\InvoiceDataRepository;
 class NumberGenerator
 {
     public function __construct(
-        private InvoiceDataRepository $repository
+        private readonly InvoiceDataRepository $repository
     ) {}
 
     public function generate(): Number
     {
-        $lastId = $this->repository->findLastInvoiceNumber()?->getId() ?? 0;
+        $lastId = $this->repository->findLastInvoiceNumber()?->id ?? 0;
         $dateTime = new \DateTimeImmutable();
 
         return new Number(

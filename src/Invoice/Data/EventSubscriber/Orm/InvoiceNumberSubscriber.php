@@ -14,7 +14,7 @@ use Doctrine\Persistence\Event\LifecycleEventArgs;
 class InvoiceNumberSubscriber implements EventSubscriber
 {
     public function __construct(
-        private NumberGenerator $numberGenerator
+        private readonly NumberGenerator $numberGenerator
     ) {}
 
     public function getSubscribedEvents(): array

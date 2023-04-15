@@ -15,12 +15,12 @@ class InvoiceViewer
 
     public function render(InvoiceData $invoiceData, string $template = 'default'): string
     {
-        return $this->template->render(self::preparePath($template), [
+        return $this->template->render($this->preparePath($template), [
             'invoiceData' => $invoiceData
         ]);
     }
 
-    private static function preparePath(string $template): string
+    private function preparePath(string $template): string
     {
         return sprintf('invoice/%s/data.html.twig', $template);
     }

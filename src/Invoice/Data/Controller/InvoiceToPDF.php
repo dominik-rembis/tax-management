@@ -10,7 +10,7 @@ use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
 use Knp\Snappy\Pdf as PdfGenerator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class InvoiceToPDF extends AbstractController
+final class InvoiceToPDF extends AbstractController
 {
     private const FILE_NAME = 'invoice.pdf';
 

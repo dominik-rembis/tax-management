@@ -7,7 +7,7 @@ use App\Invoice\Data\Service\InvoiceViewer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-class InvoicePreview extends AbstractController
+final class InvoicePreview extends AbstractController
 {
     public function __construct(
         private readonly InvoiceViewer $invoiceViewer

@@ -7,25 +7,10 @@ namespace App\Invoice\Data\ObjectValue;
 class Number
 {
     public function __construct(
-        private readonly string $id,
-        private readonly string $month,
-        private readonly string $year
+        public readonly string $id,
+        public readonly string $month,
+        public readonly string $year
     ) {}
-    
-    public function getId(): int
-    {
-        return (int) $this->id;
-    }
-
-    public function getMonth(): int
-    {
-        return (int) $this->month;
-    }
-
-    public function getYear(): int
-    {
-        return (int) $this->year;
-    }
 
     public function getNumber(): string
     {

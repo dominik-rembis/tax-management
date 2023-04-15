@@ -12,13 +12,6 @@ class InvoiceDataRepository
         private readonly EntityManagerInterface $entityManager
     ) {}
 
-    public function findOneById(int $id): InvoiceData
-    {
-        return $this->entityManager
-            ->getRepository(InvoiceData::class)
-            ->find($id);
-    }
-
     public function findLastInvoiceNumber(): ?Number
     {
         $qb = $this->entityManager->getRepository(InvoiceData::class);

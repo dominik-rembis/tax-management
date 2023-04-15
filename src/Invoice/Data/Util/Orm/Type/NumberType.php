@@ -8,7 +8,7 @@ use Doctrine\DBAL\Types\Type;
 
 final class NumberType extends Type
 {
-    private const INVOICE_NUMBER = 'invoice_number';
+    public const INVOICE_NUMBER = 'invoice_number';
 
     public function getSQLDeclaration(array $column, AbstractPlatform $platform): string
     {
