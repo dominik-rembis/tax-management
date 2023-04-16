@@ -1,7 +1,7 @@
 <doctrine-mapping>
     <embeddable name="App\Company\ObjectValue\Address">
-        <field name="street" type="string" length="30"/>
-        <field name="zipCode" type="string" length="6"/>
+        <field name="street" type="string" length="50"/>
+        <field name="zipCode" type="string" length="8"/>
         <field name="city" type="string" length="30"/>
         <field name="country" type="string" length="30"/>
     </embeddable>

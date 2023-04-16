@@ -27,7 +27,7 @@ final class VatIdentifierValidator extends ConstraintValidator
             throw new ValidatorNotSupportModel(Company::class);
         }
 
-        if ($this->isNotCorrect($model->getAddress()->getCountry(), $value)) {
+        if ($this->isNotCorrect($model->getAddress()->country, $value)) {
             $this->context
                 ->buildViolation($constraint->getMessage())
                 ->setParameter('{{ nip }}', $value)

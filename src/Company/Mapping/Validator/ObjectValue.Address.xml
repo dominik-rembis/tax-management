@@ -3,13 +3,13 @@
         <property name="street">
             <constraint name="Length">
                 <option name="min">1</option>
-                <option name="max">30</option>
+                <option name="max">50</option>
             </constraint>
         </property>
         <property name="zipCode">
             <constraint name="NotBlank"/>
             <constraint name="Regex">
-                <option name="pattern">/^\d{2}-\d{3}$/</option>
+                <option name="pattern">/^(\d{2}-\d{3})|(\w{3} \d{4})$/</option>
             </constraint>
         </property>
         <property name="city">
